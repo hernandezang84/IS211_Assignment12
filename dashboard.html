@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <h1>Dashboard</h1>
+        <h2>Students</h2>
+        <ul>
+            {% for student in students %}
+            <li>{{ student[1] }} {{ student[2] }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Quizzes</h2>
+        <ul>
+            {% for quiz in quizzes %}
+            <li>{{ quiz[1] }} - {{ quiz[2] }} questions - Date: {{ quiz[3] }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/student/add">Add Student</a> ! <a href="/quiz/add">Add Quiz</a>
+    </body>
+</html>
